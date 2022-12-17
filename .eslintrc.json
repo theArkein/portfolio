@@ -3,5 +3,9 @@
   "extends": ["airbnb", "airbnb-typescript", "next/core-web-vitals"],
   "parserOptions": {
     "project": "./tsconfig.json"
+  },
+  "rules": {
+    "object-curly-newline": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }
