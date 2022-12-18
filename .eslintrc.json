@@ -1,11 +1,12 @@
 {
   "plugins": ["prettier"],
-  "extends": ["airbnb", "airbnb-typescript", "next/core-web-vitals"],
+  "extends": ["airbnb", "airbnb-typescript", "plugin:prettier/recommended", "next/core-web-vitals"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
     "object-curly-newline": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "prettier/prettier": ["error", { "singleQuote": true }]
   }
 }
