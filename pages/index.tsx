@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <h3>Welcome to my portfolio</h3>
+        <h3 className="text-white">Welcome to my portfolio</h3>
       </main>
     </>
   );
