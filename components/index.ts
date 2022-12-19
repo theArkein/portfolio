@@ -1,2 +1,2 @@
-export * from './ToggleTheme';
+export * from './ThemeToggler';
 export * from './Navbar';
