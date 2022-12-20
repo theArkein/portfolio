@@ -1,12 +1,10 @@
+import { Footer, Navbar } from '@components';
 import {
-  GithubIcon,
-  InstagramIcon,
-  LichessIcon,
-  LinkedinIcon,
-  MediumIcon,
-  Navbar,
-} from '@components';
-import { BriefcaseIcon, MapPinIcon } from '@heroicons/react/24/outline';
+  BriefcaseIcon,
+  CodeBracketIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+} from '@heroicons/react/24/outline';
 import Head from 'next/head';
 import Image from 'next/image';
 import ProfilePicture from '../public/profile-picture.png';
@@ -19,8 +17,9 @@ export default function Home() {
         <meta name="description" content="Personal Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className="m-auto flex h-screen max-w-5xl flex-col justify-between pb-20 pt-32 dark:text-white">
-        <section>
+      <main className="m-auto flex h-screen max-w-5xl flex-col gap-24 pb-20 pt-10 dark:text-white">
+        <Navbar />
+        <section className="flex-1">
           <section>
             <div className="flex items-center justify-between">
               <div className="flex flex-col gap-3">
@@ -30,14 +29,40 @@ export default function Home() {
                     Sarad Singh
                   </h1>
                 </div>
-                <div className=" flex items-center gap-4 font-medium text-primary-500">
-                  <div className="flex items-center gap-2">
-                    <BriefcaseIcon className="h-4 w-4" />
-                    <span>Full Stack Software Engineer</span>
+                <div>
+                  <div className=" flex items-center gap-4 font-medium text-primary-500">
+                    <div className="flex w-60 items-center gap-2">
+                      <BriefcaseIcon className="h-4 w-4" />
+                      <span>Full Stack Software Engineer</span>
+                    </div>
+                    <div className="flex w-60 items-center  gap-2">
+                      <MapPinIcon className="h-4 w-4" />
+                      <span>Kathmandu, Nepal</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <MapPinIcon className="h-4 w-4" />
-                    <span>Kathmandu, Nepal</span>
+                  <div className=" flex items-center gap-4 font-medium text-primary-500">
+                    <div className="flex w-60 items-center  gap-2">
+                      <EnvelopeIcon className="h-4 w-4" />
+                      <a
+                        target="_blank"
+                        href="mailto:mail@saradsingh.com.np"
+                        rel="noreferrer"
+                        className=" underline-offset-2 hover:text-primary-300 hover:underline"
+                      >
+                        mail@saradsingh.com.np
+                      </a>
+                    </div>
+                    <div className="flex w-60 items-center  gap-2">
+                      <CodeBracketIcon className="h-4 w-4" />
+                      <a
+                        target="_blank"
+                        href="mailto:mail@saradsingh.com.np"
+                        rel="noreferrer"
+                        className=" underline-offset-2 hover:text-primary-300 hover:underline"
+                      >
+                        Open to work
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -61,51 +86,9 @@ export default function Home() {
                 stuffs 😁.
               </p>
             </div>
-            <div className="flex flex-col gap-2">
-              <h6 className="mt-10 text-lg font-medium text-primary-800 dark:text-primary-200">
-                Connect me on
-              </h6>
-              <div className="flex gap-6">
-                <a
-                  href="https://lichess.org/@/theArkein"
-                  tooltip-text="Github"
-                  className="show-tooltip"
-                >
-                  <GithubIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-                </a>
-                <a
-                  href="https://lichess.org/@/theArkein"
-                  tooltip-text="LinkedIn"
-                  className="show-tooltip"
-                >
-                  <LinkedinIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-                </a>
-                <a
-                  href="https://lichess.org/@/theArkein"
-                  tooltip-text="Medium"
-                  className="show-tooltip"
-                >
-                  <MediumIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-                </a>
-                <a
-                  href="https://lichess.org/@/theArkein"
-                  tooltip-text="Instagram"
-                  className="show-tooltip"
-                >
-                  <InstagramIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-                </a>
-                <a
-                  href="https://lichess.org/@/theArkein"
-                  tooltip-text="Lichess"
-                  className="show-tooltip"
-                >
-                  <LichessIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-                </a>
-              </div>
-            </div>
           </section>
         </section>
-        <Navbar />
+        <Footer />
       </main>
     </>
   );
