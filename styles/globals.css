@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@layer components {
+    .show-tooltip{
+        @apply 
+        relative 
+        hover:after:absolute
+        hover:after:top-6
+        hover:after:left-1/2
+        hover:after:-translate-x-1/2
+        hover:after:py-[2px]
+        hover:after:px-2 
+        hover:after:bg-primary-700
+        hover:after:border 
+        hover:after:border-primary-500 
+        hover:after:text-[10px]
+        hover:after:text-white
+        hover:after:content-[attr(tooltip-text)];
+    }
+}
