@@ -82,8 +82,8 @@ export default function Home() {
               <p>
                 Getting better everyday & working with great people. These days,
                 I am castling my Queen ♛, tuning chords for my Uke 🎶, lifting
-                some weights 💪🏼, other some random stuffs and some other random
-                stuffs 😁.
+                some weights 💪🏼, watching Bulls & Bears 📈, other some random
+                stuffs and some other random stuffs 😁.
               </p>
             </div>
           </section>
