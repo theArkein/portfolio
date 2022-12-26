@@ -1,10 +1,45 @@
 import {
+  DevToIcon,
   GithubIcon,
   InstagramIcon,
   LichessIcon,
   LinkedinIcon,
-  MediumIcon,
 } from './icons';
+
+const socialLinks = [
+  {
+    order: 1,
+    name: 'Github',
+    link: 'https://github.com/theArkein/theArkein',
+    icon: <GithubIcon className="h-4 w-4 text-primary-800 dark:fill-white" />,
+  },
+  {
+    order: 2,
+    name: 'Linkedin',
+    link: 'https://www.linkedin.com/in/leosarad-in/',
+    icon: <LinkedinIcon className="h-4 w-4 text-primary-800 dark:fill-white" />,
+  },
+  {
+    order: 3,
+    name: 'Dev.to',
+    link: 'https://dev.to/',
+    icon: <DevToIcon className="h-4 w-4 text-primary-800 dark:fill-white" />,
+  },
+  {
+    order: 4,
+    name: 'Instagram',
+    link: 'https://www.instagram.com/the.arkein',
+    icon: (
+      <InstagramIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
+    ),
+  },
+  {
+    order: 5,
+    name: 'Lichess',
+    link: 'https://lichess.org/@/theArkein',
+    icon: <LichessIcon className="h-4 w-4 text-primary-800 dark:fill-white" />,
+  },
+];
 
 export function Footer() {
   return (
@@ -13,41 +48,18 @@ export function Footer() {
         Connect me on
       </h6>
       <div className="flex gap-6">
-        <a
-          href="https://lichess.org/@/theArkein"
-          tooltip-text="Github"
-          className="show-tooltip"
-        >
-          <GithubIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-        </a>
-        <a
-          href="https://lichess.org/@/theArkein"
-          tooltip-text="LinkedIn"
-          className="show-tooltip"
-        >
-          <LinkedinIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-        </a>
-        <a
-          href="https://lichess.org/@/theArkein"
-          tooltip-text="Medium"
-          className="show-tooltip"
-        >
-          <MediumIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-        </a>
-        <a
-          href="https://lichess.org/@/theArkein"
-          tooltip-text="Instagram"
-          className="show-tooltip"
-        >
-          <InstagramIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-        </a>
-        <a
-          href="https://lichess.org/@/theArkein"
-          tooltip-text="Lichess"
-          className="show-tooltip"
-        >
-          <LichessIcon className="h-4 w-4 text-primary-800 dark:fill-white" />
-        </a>
+        {socialLinks.sort().map(({ order, link, name, icon }) => (
+          <a
+            target="_blank"
+            key={order}
+            href={link}
+            tooltip-text={name}
+            className="show-tooltip"
+            rel="noreferrer"
+          >
+            {icon}
+          </a>
+        ))}
       </div>
     </div>
   );

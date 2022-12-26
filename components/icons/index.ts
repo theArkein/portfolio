@@ -3,3 +3,4 @@ export * from './Instagram';
 export * from './LinkedinIcon';
 export * from './MediumIcon';
 export * from './GithubIcon';
+export * from './DevToIcon';
