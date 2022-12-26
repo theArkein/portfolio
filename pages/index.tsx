@@ -1,10 +1,5 @@
 import { Footer, Navbar } from '@components';
-import {
-  BriefcaseIcon,
-  CodeBracketIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-} from '@heroicons/react/24/outline';
+import { BriefcaseIcon, CodeBracketIcon } from '@heroicons/react/24/outline';
 import Head from 'next/head';
 import Image from 'next/image';
 import ProfilePicture from '../public/profile-picture.png';
@@ -30,39 +25,22 @@ export default function Home() {
                   </h1>
                 </div>
                 <div>
-                  <div className=" flex items-center gap-4 font-medium text-primary-500">
-                    <div className="flex w-60 items-center gap-2">
-                      <BriefcaseIcon className="h-4 w-4" />
-                      <span>Full Stack Software Engineer</span>
-                    </div>
-                    <div className="flex w-60 items-center  gap-2">
-                      <MapPinIcon className="h-4 w-4" />
-                      <span>Kathmandu, Nepal</span>
-                    </div>
+                  <div className="flex items-center gap-2 font-medium text-primary-500">
+                    <BriefcaseIcon className="h-4 w-4" />
+                    <span>Full Stack Software Engineer, </span>
+                    <span>Kathmandu, Nepal</span>
                   </div>
-                  <div className=" flex items-center gap-4 font-medium text-primary-500">
-                    <div className="flex w-60 items-center  gap-2">
-                      <EnvelopeIcon className="h-4 w-4" />
-                      <a
-                        target="_blank"
-                        href="mailto:mail@saradsingh.com.np"
-                        rel="noreferrer"
-                        className=" underline-offset-2 hover:text-primary-300 hover:underline"
-                      >
-                        mail@saradsingh.com.np
-                      </a>
-                    </div>
-                    <div className="flex w-60 items-center  gap-2">
-                      <CodeBracketIcon className="h-4 w-4" />
-                      <a
-                        target="_blank"
-                        href="mailto:mail@saradsingh.com.np"
-                        rel="noreferrer"
-                        className=" underline-offset-2 hover:text-primary-300 hover:underline"
-                      >
-                        Open to work
-                      </a>
-                    </div>
+                  <div className="flex items-center  gap-2 font-medium text-primary-500">
+                    <CodeBracketIcon className="h-4 w-4" />
+                    <span>Open to work:</span>
+                    <a
+                      target="_blank"
+                      href="mailto:mail@saradsingh.com.np"
+                      rel="noreferrer"
+                      className=" underline-offset-2 hover:text-primary-300 hover:underline"
+                    >
+                      mail@saradsingh.com.np
+                    </a>
                   </div>
                 </div>
               </div>
@@ -77,13 +55,12 @@ export default function Home() {
           </section>
           <section className="mt-20 max-w-lg text-justify">
             <h5 className="text-lg font-semibold">Ethos</h5>
-            <div className="mt-2 flex flex-col gap-3 text-primary-500">
-              <p>Realizing ideas into web products with my magical code 🤩</p>
+            <div className="mt-2 flex flex-col gap-1 text-primary-500">
+              <p>Realizing ideas into reality with my magical code.</p>
               <p>
-                Getting better everyday & working with great people. These days,
-                I am castling my Queen ♛, tuning chords for my Uke 🎶, lifting
-                some weights 💪🏼, watching Bulls & Bears 📈, other some random
-                stuffs and some other random stuffs 😁.
+                These days, I am castling my Queen, tuning chords for my Uke,
+                lifting some weights, watching Bulls & Bears and enjoying my day
+                😁.
               </p>
             </div>
           </section>
