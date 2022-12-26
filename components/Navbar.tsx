@@ -2,9 +2,9 @@ import { ThemeToggler } from './ThemeToggler';
 
 const menuItems = [
   { label: 'Home', link: '/' },
-  { label: 'Works', link: '#' },
-  { label: 'Blogs', link: '#' },
-  { label: 'Stuffs', link: '#' },
+  { label: 'Resume', link: '/resume' },
+  { label: 'Blogs', link: '/blogs' },
+  { label: 'Stuffs', link: '/stuffs' },
 ];
 
 export function Navbar() {
