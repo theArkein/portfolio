@@ -4,7 +4,7 @@ import { Footer } from '../Footer';
 
 export default function Layout({ children }: { children: ReactElement }) {
   return (
-    <div className="m-auto flex h-screen max-w-5xl flex-col gap-24 pb-20 pt-10 dark:text-white">
+    <div className="m-auto flex h-screen max-w-5xl flex-col pb-20 pt-10 dark:text-white">
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
