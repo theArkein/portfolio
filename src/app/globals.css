@@ -99,13 +99,13 @@
   .inlineCode {
     @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
   }
-  .text-large {
+  .typo-large {
     @apply text-lg font-semibold;
   }
-  .text-small {
+  .typo-small {
     @apply text-sm font-medium leading-none;
   }
-  .text-muted {
+  .typo-muted {
     @apply text-sm text-muted-foreground;
   }
 }
