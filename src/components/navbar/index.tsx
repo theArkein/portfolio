@@ -28,7 +28,7 @@ function Navbar() {
   const { theme = "dark" } = useTheme();
 
   return (
-    <header className="flex justify-between items-center w-full">
+    <header className="flex justify-between items-center w-full sticky top-0 pt-8 z-50 bg-background">
       <div className="flex gap-6 items-center">
         <Link href="/">
           <Logo
