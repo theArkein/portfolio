@@ -2,48 +2,60 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { notes } from "@/mocks/notes";
+import { allNotes } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Notes() {
   const leftNotes: React.JSX.Element[] = [];
   const rightNotes: React.JSX.Element[] = [];
 
-  notes.map(({ date, title, content, tags, readTime, imageSrc }, index) => {
-    const noteElement = (
-      <Card className="">
-        {imageSrc && (
-          <div className="relative w-full h-40">
-            <Image fill className="object-cover" src={imageSrc} alt="" />
-          </div>
-        )}
-        <div className="p-4">
-          <div className="flex items-center gap-4">
-            <p className=" typo-muted text-xs">{date}</p>
-          </div>
-          <h3 className="typo-small mt-1">{title}</h3>
+  const notes = allNotes.sort((a, b) =>
+    compareDesc(new Date(a.date), new Date(b.date))
+  );
 
-          <p className="typo-muted text-justify mt-2">{content}...</p>
-          <div className="mt-3 flex justify-between text-xs text-muted-foreground">
-            <div className=" flex gap-1">
-              {tags.map((tag) => (
-                <Badge
-                  key={tag}
-                  variant="outline"
-                  className="text-xs text-muted-foreground"
-                >
-                  {tag}
-                </Badge>
-              ))}
+  notes.map(
+    ({ date, title, author, excerpt, readTime, imgSrc, url }, index) => {
+      const tags = ["typescript", "react"];
+      const noteElement = (
+        <Card className="" key={index}>
+          {imgSrc && (
+            <div className="relative w-full h-40">
+              <Image fill className="object-cover" src={imgSrc} alt="" />
             </div>
-            <div>{readTime}</div>
-          </div>
-        </div>
-      </Card>
-    );
+          )}
+          <div className="p-4">
+            <div className="flex items-center gap-4">
+              <p className=" typo-muted text-xs">{date}</p>
+            </div>
+            <Link href={url}>
+              <h3 className="typo-small mt-1">{title}</h3>
+            </Link>
 
-    index % 2 ? rightNotes.push(noteElement) : leftNotes.push(noteElement);
-  });
+            <p className="typo-muted text-justify mt-2">{excerpt}...</p>
+            <div className="mt-3 flex justify-between text-xs text-muted-foreground">
+              <div className=" flex gap-1">
+                {tags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    variant="outline"
+                    className="text-xs text-muted-foreground"
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+              <div>{readTime}</div>
+            </div>
+          </div>
+        </Card>
+      );
+
+      index % 2 ? rightNotes.push(noteElement) : leftNotes.push(noteElement);
+    }
+  );
   return (
     <div className="flex flex-col bg-background">
       <div className="sticky top-[72px] bg-background z-50 pt-8 pb-4">
