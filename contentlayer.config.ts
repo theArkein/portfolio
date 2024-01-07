@@ -7,8 +7,8 @@ export const Note = defineDocumentType(() => ({
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
-    date: { type: "date", required: true },
-    author: { type: "string", required: true },
+    date: { type: "string", required: true },
+    author: { type: "string", required: false },
     tags: {
       type: "list",
       of: {
@@ -17,7 +17,7 @@ export const Note = defineDocumentType(() => ({
       required: true,
     },
     readTime: { type: "string", required: true },
-    imgSrc: { type: "string", required: true },
+    imgSrc: { type: "string", required: false },
     excerpt: { type: "string", required: true },
   },
   computedFields: {
