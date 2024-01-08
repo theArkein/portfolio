@@ -1,5 +1,11 @@
 // contentlayer.config.ts
+
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import highlight from "rehype-highlight";
+import remarkGfm from "remark-gfm";
+
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
 
 export const Note = defineDocumentType(() => ({
   name: "Note",
@@ -28,4 +34,17 @@ export const Note = defineDocumentType(() => ({
   },
 }));
 
-export default makeSource({ contentDirPath: "notes", documentTypes: [Note] });
+export default makeSource({
+  contentDirPath: "notes",
+  documentTypes: [Note],
+  mdx: {
+    // remarkPlugins: [],
+    rehypePlugins: [
+      highlight({
+        languages: {
+          javascript,
+        },
+      }),
+    ],
+  },
+});

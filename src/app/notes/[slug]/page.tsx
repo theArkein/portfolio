@@ -18,6 +18,7 @@ const Note = ({ params }: { params: { slug: string } }) => {
 
   return (
     <article className="">
+      <h1 className="h1 mb-4">{post.title}</h1>
       <Mdx code={post.body.code} />
     </article>
   );
