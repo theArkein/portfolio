@@ -14,12 +14,13 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 
 const Note = ({ params }: { params: { slug: string } }) => {
   const post = allNotes.find((post) => post._raw.flattenedPath === params.slug);
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
+  console.log(params);
+  // if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
   return (
     <article className="">
-      <h1 className="h1 mb-4">{post.title}</h1>
-      <Mdx code={post.body.code} />
+      <h1 className="h1 mb-4">{post?.title}</h1>
+      <Mdx code={post?.body.code ?? ""} />
     </article>
   );
 };

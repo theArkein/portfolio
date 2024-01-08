@@ -1,8 +1,8 @@
 import * as React from "react";
 import Image from "next/image";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import "@/styles/highlight-js/github-dark.css";
-import "@/styles/highlight-js/github.css";
+// import "@/styles/highlight-js/github-dark.css";
+// import "@/styles/highlight-js/github.css";
 
 import { cn } from "@/lib/utils";
 import { MDXComponents } from "mdx/types";
@@ -131,13 +131,7 @@ const components: MDXComponents = {
     />
   ),
   pre: ({ className, ...props }) => (
-    <pre
-      className={cn(
-        "mb-4 mt-6 overflow-x-auto rounded-lg border bg-black p-4",
-        className
-      )}
-      {...props}
-    />
+    <pre className={cn("mb-4 mt-6 rounded-lg ", className)} {...props} />
   ),
   code: ({ className, ...props }) => (
     <code
@@ -148,7 +142,6 @@ const components: MDXComponents = {
       {...props}
     />
   ),
-  Image,
 };
 
 interface MdxProps {

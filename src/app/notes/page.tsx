@@ -14,6 +14,8 @@ function Notes() {
     compareDesc(new Date(a.date), new Date(b.date))
   );
 
+  console.log(notes.length);
+
   const leftNotes: React.JSX.Element[] = [];
   const rightNotes: React.JSX.Element[] = [];
 

@@ -1,0 +1,36 @@
+---
+author: "John Doe"
+title: "Welcome to my MDX pages!"
+date: "Apr 5 2023"
+type: "Note"
+tags: ["markdown", "yaml", "metadata"]
+imgSrc: "https://res.cloudinary.com/read-cv/image/upload/c_limit,h_512,w_512/v1/1/profileItems/jYrKm50dOMeOO1gz85sZVwBFg2U2/newProfileItem/715f21f0-bbdd-4201-94d4-130054521c0a.png?_a=ATO2BAA0"
+readTime: "7 min read"
+excerpt: "Explore the basics of GraphQL and its advantages over traditional REST APIs."
+---
+
+# Introduction to GraphQL: A Modern Query Language for APIs
+
+GraphQL is a powerful and flexible query language designed for APIs. Developed by Facebook, GraphQL provides a more efficient, flexible, and intuitive alternative to traditional REST APIs. In this introductory guide, we'll explore the fundamentals of GraphQL and why it has gained popularity among developers.
+
+## What is GraphQL?
+
+GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. It allows clients to request only the data they need, eliminating over-fetching and under-fetching of data common in traditional REST APIs.
+
+## Key Concepts
+
+### 1. **Schema**
+
+In GraphQL, the schema defines the structure of the data that clients can request. It includes types for objects, queries, and mutations. Types are the building blocks that represent the data structure.
+
+```graphql
+type Query {
+  getUser(id: ID!): User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+```

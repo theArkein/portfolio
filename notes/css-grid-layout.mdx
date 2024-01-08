@@ -1,0 +1,31 @@
+---
+author: "John Doe"
+title: "Welcome to my MDX pages!"
+date: "Feb 15 2023"
+type: "Note"
+tags: ["markdown", "yaml", "metadata"]
+readTime: "10 min read"
+excerpt: "Master the CSS Grid Layout for creating responsive and dynamic web layouts."
+---
+
+CSS Grid Layout is a powerful tool that enables developers to create complex, responsive layouts with ease. Introduced in CSS3, it provides a two-dimensional grid system, allowing precise control over both rows and columns. In this blog post, we'll explore the fundamentals of CSS Grid Layout and how you can leverage its features for modern web design.
+
+## Getting Started with CSS Grid
+
+To start using CSS Grid, you first define a grid container and then place items within the grid. Here's a basic example:
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+```
