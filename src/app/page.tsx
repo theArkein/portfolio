@@ -1,3 +1,4 @@
+import ProgressBar from "@/components/progress-bar";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import {
   BriefcaseIcon,
@@ -46,7 +47,7 @@ const socials = [
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col  h-[calc(100vh-102px)] pt-32">
+    <div className="relative flex flex-col  h-[calc(80vh-102px)] pt-32">
       <div className="flex-auto flex flex-col items-center">
         <div className="flex gap-6 items-center mx-auto">
           <div className=" h-20 w-20 bg-foreground rounded-full"></div>
@@ -65,18 +66,23 @@ export default function Home() {
         <div className=" mt-10 w-[512px] mx-auto">
           <h4 className=" font-semibold">About</h4>
           <p className=" typo-muted text-justify">
-            I am a Javascript Full Stack Developer based in Kathmandu, Nepal.
-            Currently I am working at GlobalyHub Nepal as a mid level software
-            engineer. In these years I have been building web products using
-            VsCode, Git, Typescript, ReactJs, NextJs, NodeJs and NestJs
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa,
+            eius. Dolores illum neque, modi assumenda inventore dicta a
+            expedita, culpa labore soluta quidem ratione at. Totam odit alias
+            laboriosam nulla?
           </p>
+          <ProgressBar />
           <div className="mt-3 flex gap-3 items-center">
             <h3>Socials:</h3>
             <div className="flex gap-4 text-muted-foreground">
               {socials.map(
                 (social, index) =>
                   social.enable && (
-                    <Link key={index} href={social.path}>
+                    <Link
+                      className="hover:text-foreground"
+                      key={index}
+                      href={social.path}
+                    >
                       {social.icon}
                     </Link>
                   )
@@ -84,17 +90,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center gap-6 mt-36 text-muted-foreground underline underline-offset-4 text-sm ">
-          {bottomNavs.map((nav) => (
-            <Link
-              className="hover:text-foreground"
-              key={nav.label}
-              href={nav.path}
-            >
-              {nav.label}
-            </Link>
-          ))}
-        </div>
+      </div>
+      <div className="flex justify-center gap-6 mt-36 text-muted-foreground underline underline-offset-4 text-sm ">
+        {bottomNavs.map((nav) => (
+          <Link
+            className="hover:text-foreground"
+            key={nav.label}
+            href={nav.path}
+          >
+            {nav.label}
+          </Link>
+        ))}
       </div>
     </div>
   );
