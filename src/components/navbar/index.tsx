@@ -19,7 +19,7 @@ const navs = [
   },
   {
     label: "WebNuggets",
-    path: "/webnuggets",
+    path: "/web-nuggets",
   },
 ];
 
