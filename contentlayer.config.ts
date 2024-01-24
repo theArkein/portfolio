@@ -68,7 +68,7 @@ export default makeSource({
   contentDirPath: "notes",
   documentTypes: [Note],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    // remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
       [rehypePrettyCode, options],
