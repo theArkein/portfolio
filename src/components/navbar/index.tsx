@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ModeToggle } from "../ui/mode-toggle";
 import Logo from "../icons/a";
 import { useTheme } from "next-themes";
@@ -25,18 +25,19 @@ const navs = [
 
 function Navbar() {
   const pathname = usePathname();
-  const { theme = "dark" } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <header className="flex justify-between items-center w-full sticky top-0 pt-8 z-50 bg-background">
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-2 md:gap-6 items-center">
         <Link href="/">
-          <Logo
-            color={theme === "dark" ? "#000" : "#fff"}
-            fill={theme === "dark" ? "#fff" : "#000"}
-          />
+          {theme === "dark" ? (
+            <Logo color="#000" fill="#fff" />
+          ) : (
+            <Logo color="#fff" fill="#000" />
+          )}
         </Link>
-        <nav className="flex items-center gap-6 text-sm w-full">
+        <nav className="flex items-center gap-2 md:gap-6 text-sm w-full">
           {navs.map((nav) => (
             <Link
               className={cn(

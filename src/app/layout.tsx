@@ -33,7 +33,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col max-w-screen-md relative  m-auto">
+          <div className="flex flex-col max-w-screen-md relative  m-auto px-4">
             <Navbar />
             {children}
           </div>
