@@ -13,18 +13,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bottomNavs = [
-  {
-    label: "Read CV",
-    path: "/",
-  },
-  {
-    label: "Work",
-    path: "/",
-  },
-  {
-    label: "MemoryArchive",
-    path: "/",
-  },
+  // {
+  //   label: "Read CV",
+  //   path: "/",
+  // },
+  // {
+  //   label: "Work",
+  //   path: "/",
+  // },
+  // {
+  //   label: "MemoryArchive",
+  //   path: "/",
+  // },
 ];
 
 const socials = [
@@ -53,7 +53,7 @@ export default function Home() {
           <div className=" h-20 w-20 bg-foreground rounded-full"></div>
           <div>
             <h1 className=" text-5xl font-bold">Sarad Singh</h1>
-            <div className=" text-muted-foreground flex gap-3">
+            <div className=" text-muted-foreground flex gap-3 mt-2">
               <div className="flex gap-2">
                 <BriefcaseIcon className=" w-3" /> <h3>Software Engineer</h3>
               </div>
@@ -73,7 +73,7 @@ export default function Home() {
           </p>
           <ProgressBar />
           <div className="mt-3 flex gap-3 items-center">
-            <h3>Socials:</h3>
+            <h3>Profiles:</h3>
             <div className="flex gap-4 text-muted-foreground">
               {socials.map(
                 (social, index) =>
